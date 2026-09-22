@@ -18,6 +18,8 @@ if ($path === '') {
 }
 
 $candidate = realpath($projectRoot . '/' . $path);
+error_log("DEBUG path=[$path] candidate=[" . var_export($candidate, true) . "] root=[$projectRoot]");
+
 
 // Folders jinhe kabhi bhi directly serve nahi karna (safety)
 $blocked = [
